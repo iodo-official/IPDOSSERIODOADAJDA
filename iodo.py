@@ -48,7 +48,7 @@ class Brutalize:
       if size != 0:
         self.total += self.sent * bytediff / gb * interval
         print(stage(
-            f"{fluo}{round(size)} {white}Mb/s {red}-{white} Total: {fluo}{round(self.total, 1)} {white}Gb. {' '*20}"
+            f"{fluo}{round(size)} {white}Mb/s {purple}-{white} Total: {fluo}{round(self.total, 1)} {white}Gb. {' '*20}"
         ),
               end='\r')
 
@@ -156,7 +156,7 @@ def main():
       Colorate.Diagonal(Col.DynamicMIX((Col.white, bpurple)),
                         Center.XCenter(banner)))
 
-  ip = input(stage(f"Enter the IP to IODODDOS {red}->{fluo2} ", '?'))
+  ip = input(stage(f"Enter the IP to IODODDOS {purple}->{fluo2} ", '?'))
   print()
 
   try:
@@ -168,7 +168,7 @@ def main():
 
   port = input(
       stage(
-          f"Enter port {red}[{white}press {fluo2}enter{white} to attack all ports{red}] {red}->{fluo2} ",
+          f"Enter port {purple}[{white}press {fluo2}enter{white} to attack all ports{purple}] {purple}->{fluo2} ",
           '?'))
   print()
 
@@ -184,7 +184,7 @@ def main():
 
   force = input(
       stage(
-          f"Bytes per packet {red}[{white}press {fluo2}enter{white} for 1250{red}] {red}->{fluo2} ",
+          f"Bytes per packet {purple}[{white}press {fluo2}enter{white} for 1250{purple}] {purple}->{fluo2} ",
           '?'))
   print()
 
@@ -198,7 +198,7 @@ def main():
 
   threads = input(
       stage(
-          f"Threads {red}[{white}press {fluo2}enter{white} for 100{red}] {red}->{fluo2} ",
+          f"Threads {purple}[{white}press {fluo2}enter{white} for 100{purple}] {purple}->{fluo2} ",
           '?'))
   print()
 
@@ -211,7 +211,7 @@ def main():
       error("Error! Please enter an integer.")
 
   print()
-  cport = '' if port is None else f'{red}:{fluo2}{port}'
+  cport = '' if port is None else f'{purple}:{fluo2}{port}'
   print(stage(f"Starting attack on {fluo2}{ip}{cport}{white}."), end='\r')
 
   iodo = Brutalize(ip, port, force, threads)
